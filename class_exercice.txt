@@ -1,0 +1,5 @@
+1: SELECT firstName FROM employees
+
+2: SELECT productName FROM products
+
+3: SELECT customerName,contactFirstName FROM `customers`
