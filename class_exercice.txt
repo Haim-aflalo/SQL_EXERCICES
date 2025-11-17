@@ -1,0 +1,29 @@
+1: SELECT firstName FROM employees
+
+2: SELECT productName FROM products
+
+3: SELECT customerName,contactFirstName FROM `customers`
+
+
+1: SELECT * FROM customers
+WHERE addressLine1 LIKE '%Via%';
+
+2: SELECT * FROM `products` WHERE productLine LIKE '%Pia%';
+
+3:
+
+
+
+
+1: SELECT * FROM `products` 
+WHERE productDescription LIKE '%Official%'
+AND quantityInStock BETWEEN 4000 AND 5000;
+
+2: SELECT * FROM `customers`
+WHERE country IN ('USA','Spain','Italy')
+OR customerName LIKE 'Australian Collectables, Ltd';
+
+3: SELECT * FROM `products` WHERE productLine LIKE 'Planes'
+AND buyPrice > 30;
+
+4: SELECT * FROM `employees` WHERE (firstName LIKE 'A%' OR firstName LIKE 'N%') AND jobTitle LIKE '%Manager%';
