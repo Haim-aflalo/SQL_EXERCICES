@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1: SELECT firstName FROM employees
 
 2: SELECT productName FROM products
@@ -27,3 +28,10 @@ OR customerName LIKE 'Australian Collectables, Ltd';
 AND buyPrice > 30;
 
 4: SELECT * FROM `employees` WHERE (firstName LIKE 'A%' OR firstName LIKE 'N%') AND jobTitle LIKE '%Manager%';
+=======
+1: SELECT firstName FROM employees
+
+2: SELECT productName FROM products
+
+3: SELECT customerName,contactFirstName FROM `customers`
+>>>>>>> 63b174b15037039b619c6ffe3af0cbe2f8028745
