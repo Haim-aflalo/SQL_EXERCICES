@@ -25,7 +25,8 @@ UPDATE lecturers SET Email = 'noemail@gmail.com' WHERE Email = '';
 
 
 UPDATE students
-SET BirthDate = '02/02/2020'
+SET age = 98
+where age != null
 
 DELETE FROM study_hours
 WHERE ClassId > 4
