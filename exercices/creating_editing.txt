@@ -1,0 +1,37 @@
+CREATE DATABASE schools
+
+CREATE TABLE(
+	ID  int IDENTITY(1,1) PRIMARY KEY,
+	TeacherName varchar(50) not null,
+	Email varchar(70) not null,
+	Phone varchar(15) not null
+	)
+CREATE TABLE study_hours(
+    SELECT * FROM study_hours_extended WHERE classId BETWEEN 1 AND 5
+)
+
+ALTER TABLE lecturers
+ADD Email varchar(70) not null;
+
+ALTER TABLE lecturers
+MODIFY LecturerName varchar(80) not null;
+
+ALTER TABLE classes
+DROP COLLUMN Status
+
+DROP TABLE teachers_backup
+
+CREATE TABLE students(SELECT * FROM students_temp)
+
+ALTER TABLE students
+DROP COLLUMN personlId
+
+ALTER TABLE students
+ADD age SMALLINT(18)
+
+DELETE FROM students WHERE BirthDate < "01-01-1992"
+
+ALTER TABLE BirthDate
+ADD CONSTRAINT bd_range CHEK (BirthDate>=01/01/1992,BirthDate<=31/12/2000)
+
+DROP TABLE students_temp
