@@ -1,0 +1,34 @@
+INSERT INTO students (id,FullName,IdentityNumber,BirthDate,ClassId) VALUES (101,"Jennifer Thomas",999411611691,"04/07/2000",2),
+(102,"Michael Clark",999494918151,"18/09/1991",4);
+
+
+
+INSERT INTO lecturers(LecturerName,Email) VALUES ('John Smith',' jsmith@university.edu.il')
+
+
+SELECT * FROM `classes`;
+
+SELECT * FROM `lecturers` WHERE LecturerName LIKE 'M%'
+SELECT LecturerName FROM `lecturers` WHERE LecturerName LIKE 'M%';
+
+
+SELECT * FROM `students` ORDER BY IdentityNumber;
+
+SELECT * FROM `students` ORDER BY FullName ;
+
+UPDATE students
+SET FullName = 'James Smith'
+WHERE Id = 999160426740
+
+
+UPDATE lecturers SET Email = 'noemail@gmail.com' WHERE Email = '';
+
+
+UPDATE students
+SET BirthDate = '02/02/2020'
+
+DELETE FROM study_hours
+WHERE ClassId > 4
+
+DELETE FROM students
+WHERE FullName = 'Laura Brown'
