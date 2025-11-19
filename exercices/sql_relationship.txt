@@ -34,11 +34,8 @@ Michael Thompson
 Michael Clark
 
 6
-a:SELECT LecturerName
-FROM lecturers
-WHERE Id = (SELECT Id FROM study_hours WHERE ClassId = (
-SELECT ClassID FROM students WHERE FullName = 'Michael Clark' ));
+a:SELECT LecturerName FROM lecturers WHERE id = (SELECT AfternoonLecturerId FROM study_hours WHERE ClassId = ( SELECT ClassID FROM students WHERE Id = 5 ));
 
 b:michael clark classid is 4 the  id of afternoon lecturer in this class is 7
-the lecturers whith this id is Michael Clark
+the lecturers whith this id is Michael Thompson
 
