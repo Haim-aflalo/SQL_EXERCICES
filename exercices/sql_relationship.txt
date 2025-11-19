@@ -1,0 +1,44 @@
+1
+
+1
+a: ClassId
+b: 1:M one class for many students
+
+2
+a:CourseId
+b:1:1 one course per class
+
+3
+a:No
+b:adding exta hours to teacher without change the regular hours
+c: M:N
+=======================================
+
+2
+
+
+4
+a: SELECT * FROM students WHERE ClassId = 4
+
+b: in couses the id of fullstack is 1 after this in classes we can see that the classe who content CourseId 1 is the claas with id = 4 at end in students we found students with classId 4
+
+5
+
+a:
+
+b: in courses the id of south is 2 and 3
+in study_hours we can found all the lecturers id who teach in classes 2 and 3: (8,2,7,4) those id referencies to:
+Robert Robinson
+Linda Robinson
+Michael Thompson
+Michael Clark
+
+6
+a:SELECT LecturerName
+FROM lecturers
+WHERE Id = (SELECT Id FROM study_hours WHERE ClassId = (
+SELECT ClassID FROM students WHERE FullName = 'Michael Clark' ));
+
+b:michael clark classid is 4 the  id of afternoon lecturer in this class is 7
+the lecturers whith this id is Michael Clark
+
